@@ -1,6 +1,7 @@
 module com.example.lab1fx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.example.lab1fx to javafx.fxml;
