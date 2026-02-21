@@ -20,6 +20,12 @@ public class ConverterModel
                 result = value*coeff;
 
             }
+            else if(to=="UNIT1")
+            {
+                coeff = 1;
+                result = value*coeff;
+
+            }
 
         }
         else if(from == "UNIT2")
@@ -34,6 +40,12 @@ public class ConverterModel
                 coeff = 0.14;
                 result = value*coeff;
             }
+            else if(to=="UNIT2")
+            {
+                coeff = 1;
+                result = value*coeff;
+
+            }
         }
         else if(from == "UNIT3")
         {
@@ -46,6 +58,12 @@ public class ConverterModel
             {
                 coeff = 0.14;
                 result = value/coeff;
+            }
+            else if(to=="UNIT3")
+            {
+                coeff = 1;
+                result = value*coeff;
+
             }
         }
 

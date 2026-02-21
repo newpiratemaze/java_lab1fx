@@ -6,15 +6,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="244.0" prefWidth="372.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.lab1fx.ConverterController">
+<VBox alignment="CENTER" prefHeight="244.0" prefWidth="372.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1fx.ConverterController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
     <TextField fx:id="txtFld" editable="false" prefHeight="25.0" prefWidth="195.0" text="Введите число для конвертации" />
    <TextField fx:id="txtFld1" />
-   <RadioButton id="rdBtn1" alignment="CENTER_LEFT" mnemonicParsing="false" text="Единицы 1" />
-   <RadioButton id="rdBtn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 2" />
-   <RadioButton id="rdBtn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 3" />
-    <Button onAction="#convert" text="Конвертировать" />
+   <TextField fx:id="txtFld2" editable="false" prefHeight="25.0" prefWidth="195.0" text="Из" />
+   <RadioButton id="rdBtn1" fx:id="fromUn1" alignment="CENTER_LEFT" mnemonicParsing="false" text="Единицы 1" />
+   <RadioButton id="rdBtn2" fx:id="fromUn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 2" />
+   <RadioButton id="rdBtn2" fx:id="fromUn3" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 3" />
+   <TextField fx:id="txtFld21" editable="false" prefHeight="25.0" prefWidth="195.0" text="В" />
+   <RadioButton id="rdBtn1" fx:id="toUn1" alignment="CENTER_LEFT" mnemonicParsing="false" text="Единицы 1" />
+   <RadioButton id="rdBtn2" fx:id="toUn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 2" />
+   <RadioButton id="rdBtn2" fx:id="toUn3" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 3" />
+    <Button fx:id="convBtn" onAction="#handleConvert" text="Конвертировать" />
 </VBox>

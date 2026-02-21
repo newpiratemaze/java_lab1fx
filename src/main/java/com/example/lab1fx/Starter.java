@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ConverterModel1 extends Application {
+public class Starter extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ConverterModel1.class.getResource("ConverterView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Starter.class.getResource("ConverterView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("MVC Converter");
         stage.setScene(scene);

@@ -11,7 +11,8 @@ public class ConverterController {
 
 
     @FXML
-    protected void convert() {
+    protected void handleConvert() {
+        System.out.println(123);
 
 
 
