@@ -14,8 +14,8 @@ void main()
 
     // Проверьте, что результаты соответствуют ожиданиям
     if (Math.abs(result1 - 25.4) < 0.1) {
-        System.out.println("✅ Тест 1 пройден!");
+        System.out.println("✅ Тест 1 пройден!!");
     } else {
-        System.out.println("❌ Тест 1 не пройден!");
+        System.out.println("❌ Тест 1 не пройден!!");
     }
 }
