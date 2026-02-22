@@ -21,6 +21,12 @@ public class ConverterController {
     protected RadioButton fromUn2;
     @FXML
     protected RadioButton fromUn3;
+    @FXML
+    protected RadioButton toUn1;
+    @FXML
+    protected RadioButton toUn2;
+    @FXML
+    protected RadioButton toUn3;
 
 
 
@@ -28,17 +34,42 @@ public class ConverterController {
     protected void handleConvert() {
 
         ConverterModel model = new ConverterModel();
-        String unitFrom1 = "UNIT1";
-        String unitFrom2 = "UNIT2";
-        String unitFrom3 = "UNIT3";
-        String unitTo1 = "UNIT1";
-        String unitTo2 = "UNIT2";
-        String unitTo3 = "UNIT3";
+        String unitFrom = "";
+        String unitTo = "";
 
-        if(fromUn1.isArmed())
+
+        if(fromUn1.isSelected())
         {
-
+            unitFrom="Нота";
         }
+        else if(fromUn2.isSelected())
+        {
+            unitFrom="Гц";
+        }
+        else if(fromUn3.isSelected())
+        {
+            unitFrom="Длительность";
+        }
+
+        if(toUn1.isSelected())
+        {
+            unitTo="Нота";
+        }
+        else if(toUn2.isSelected())
+        {
+            unitTo="Гц";
+        }
+        else if(toUn3.isSelected())
+        {
+            unitTo="Длительность";
+        }
+
+        String value = String.valueOf(txtFld1.getText());
+
+        String result = model.convert(value,unitFrom,unitTo);
+
+        resultField.setText(result);
+
 
 
     }
