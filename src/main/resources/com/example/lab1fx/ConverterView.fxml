@@ -4,17 +4,31 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="244.0" prefWidth="372.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.lab1fx.ConverterController">
+<VBox alignment="CENTER" prefHeight="244.0" prefWidth="372.0" spacing="20.0" style="-fx-background-color: #009999;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1fx.ConverterController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <TextField fx:id="txtFld" editable="false" prefHeight="25.0" prefWidth="195.0" text="Введите число для конвертации" />
-   <TextField fx:id="txtFld1" />
-   <RadioButton id="rdBtn1" alignment="CENTER_LEFT" mnemonicParsing="false" text="Единицы 1" />
-   <RadioButton id="rdBtn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 2" />
-   <RadioButton id="rdBtn2" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Единицы 3" />
-    <Button onAction="#convert" text="Конвертировать" />
+    <TextField fx:id="txtFld" editable="false" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #5CCCCC;" text="Введите число для конвертации" />
+    <TextField fx:id="txtFld1" style="-fx-background-color: #5CCCCC;" />
+    <TextField fx:id="txtFld2" editable="false" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #5CCCCC;" text="Из" />
+    <RadioButton id="rdBtn1" fx:id="fromUn1" alignment="CENTER_LEFT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Нота">
+        <toggleGroup>
+            <ToggleGroup fx:id="groupFrom" />
+        </toggleGroup></RadioButton>
+    <RadioButton id="rdBtn2" fx:id="fromUn2" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Гц" toggleGroup="$groupFrom" />
+    <RadioButton id="rdBtn2" fx:id="fromUn3" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Длительность" toggleGroup="$groupFrom" />
+    <TextField fx:id="txtFld21" editable="false" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #5CCCCC;" text="В" />
+    <RadioButton id="rdBtn1" fx:id="toUn1" alignment="CENTER_LEFT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Нота">
+        <toggleGroup>
+            <ToggleGroup fx:id="groupTo" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton id="rdBtn2" fx:id="toUn2" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Гц" toggleGroup="$groupTo" />
+    <RadioButton id="rdBtn2" fx:id="toUn3" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: #33CCCC; -fx-background-radius: 10;" text="Длительность" toggleGroup="$groupTo" />
+    <TextField fx:id="resultField" style="-fx-background-color: #5CCCCC;" />
+    <Button fx:id="convBtn" onAction="#handleConvert" style="-fx-background-color: #35D2AB;" text="Конвертировать" />
 </VBox>
